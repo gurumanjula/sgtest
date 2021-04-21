@@ -40,7 +40,7 @@ public class DriverScript {
 			extent = reports.startExtentReport("TestResults", appInd.readConfigData("buildNumber"));
 		}catch(Exception e)
 		{
-			System.out.println("Exception while executing 'loadClasses()' method. "+e.getMessage());
+			System.out.println("Exception while executing 'loadClasses()' met0hod. "+e.getMessage());
 		}
 	}
 	
@@ -71,7 +71,7 @@ public class DriverScript {
 					projectCount++;
 					String projectName = datatable.getCellData(strController, "ProjectNames", "ProjectName", i+1);
 					mRows = datatable.getRowCount(strController, projectName);
-					
+					System.out.println(mRows);
 					for(int j=0; j<mRows; j++)
 					{
 						executeTest = datatable.getCellData(strController, projectName, "ExecuteModule", j+1);
